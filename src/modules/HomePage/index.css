@@ -1,0 +1,17 @@
+.flexBoxTittle {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.tittleStyle{
+    padding: 20px 20px 0px 30px;
+    font-size: 1.7em;
+}
+
+.subTittleStyle{
+    color: rgb(150, 150, 150);
+    padding-left: 10px;
+    font-weight: 400;
+}

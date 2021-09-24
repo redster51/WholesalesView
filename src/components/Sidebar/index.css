@@ -1,0 +1,4 @@
+.pro-inner-item:before {
+    box-shadow: none !important;
+    border: none !important;
+}

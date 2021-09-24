@@ -1,0 +1,15 @@
+.flexBoxSlider{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.SliderContent {
+    padding: 5% 5% 0 15%;
+    color: azure;
+}
+
+.mainText{
+    font-size: 3rem;
+    color: rgb(255, 153, 0);
+}

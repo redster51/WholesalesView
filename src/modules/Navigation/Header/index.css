@@ -1,0 +1,18 @@
+.MuiIconButton-root{
+    border-radius: 15% !important;
+}
+
+.TypographyNavigationLabel {
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    margin-left: .4rem !important;
+}
+
+.NavigationButtonColor {
+    color: rgb(255, 153, 0);
+}
+
+.NavigationLink {
+    display: flex;
+    text-decoration: none !important;
+  }

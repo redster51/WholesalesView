@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+$bg: #ffffff;
+$ghost: #161616;
+$heading: #494a4b;
+$site: rgb(255, 153, 0);
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.NotFound {
+  background-color: $bg;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.NotFoundLabel {
+  color: $heading;
+  font-size: 12.5rem;
+  letter-spacing: .10em;
+  margin: .025em 0;
+  text-shadow: .05em .05em 0 rgba(0,0,0,.25);
+  white-space: nowrap;
+  
+  @media(max-width: 30rem) {
+    font-size: 8.5rem;
+  }
+  
+  & > span {
+    animation: spooky 2s alternate infinite linear;
+    color: $ghost;
+    display: inline-block;
+  }
+}
+
+.NotFoundButton{
+  background-color: $site !important;
+  color:#ffffff !important;
+  width: 10rem !important;
+}
+
+.NotFoundLink {
+  display: flex;
+  text-decoration: none;
+}
+
+.NotFoundLink:hover {
+  box-shadow: 0 2px 6px -4px rgb(0 0 0 / 20%), 0 8px 10px -4px rgb(0 0 0 / 14%), 0 8px 12px 4px rgb(0 0 0 / 5%);
+  transform: translateY(-2px);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.NotFoundLabelh2 {
+  color: $heading;
+  margin-bottom: .40em;
+  font-size: 2rem;
+}
+
+.NotFoundText {
+  font-size: 1.3rem;
+  color: $site;
+  margin-top: 0;
+}
+
+@keyframes spooky {
+  from {
+    transform: translatey(.15em) scaley(.95);
+  }
+  
+  to {
+    transform: translatey(-.15em);
+  }
+}

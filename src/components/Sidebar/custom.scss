@@ -1,0 +1,22 @@
+$sidebar-bg-color: white;
+$sidebar-color: #4d4d4d;
+$highlight-color: #262626;
+$submenu-bg-color: white;
+$submenu-bg-color-collapsed: white;
+$icon-bg-color: #111111;
+$sidebar-collapsed-width: 80px;
+
+$sidebarColor: #d6d6d6;
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';
+
+.SidebarMeniItem:hover {
+    background-color: $sidebarColor;
+    transform: translateY(-2px);
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .open {
+    background-color: $sidebarColor !important;
+  }

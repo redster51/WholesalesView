@@ -13,73 +13,73 @@ import Checkout from "../modules/Checkout";
 
 const routes =  [
     {
-        path: '/',
+        path: '/WholesalesView',
         component: HomePage,
         exact: true,
         id: 0,
     },
     {
-        path: '/login',
+        path: '/WholesalesView/login',
         component: LoginPage,
         id: 1,
     },
     {
-        path: '/signup',
+        path: '/WholesalesView/signup',
         component: SignUp,
         id: 2,
     },
     {
-        path: '/item/:id',
+        path: '/WholesalesView/item/:id',
         component: ItemInfoPage,
         id: 3,
     },
     {
-        path: '/user/:id',
+        path: '/WholesalesView/user/:id',
         component: ProfilePage,
         id: 4,
     },
     {
-        path: '/profile/:id',
+        path: '/WholesalesView/profile/:id',
         component: ProfileInfoPage,
         id: 5,
     },
     {
-        path: '/cart/:id',
+        path: '/WholesalesView/cart/:id',
         component: CartPage,
         id: 6,
     },
     {
-        path: '/orders/:id',
+        path: '/WholesalesView/orders/:id',
         component: OrderPage,
         id: 7,
     },
     {
-        path: '/checkout/:id/:orderId',
+        path: '/WholesalesView/checkout/:id/:orderId',
         component: Checkout,
         id: 8,
     },
     {
-        path: '/fees/:type/:subType',
+        path: '/WholesalesView/fees/:type/:subType',
         component: FeeContent,
         id: 9,
     },
     {
-        path: '/fees/:type',
+        path: '/WholesalesView/fees/:type',
         component: FeeContent,
         id: 10,
     },
     {
-        path: '/fees/',
+        path: '/WholesalesView/fees/',
         component: FeeContent,
         id: 11,
     },
     {
-        path: '/forbidden',
+        path: '/WholesalesView/forbidden',
         component: ForbiddenPage,
         id: 12,
     },
     {
-        path: '/*',
+        path: '/WholesalesView/*',
         component: NotFoundPage,
         id: 13,
     },

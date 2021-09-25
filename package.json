@@ -1,6 +1,7 @@
 {
   "name": "wholesales_view",
   "version": "0.1.0",
+  "homepage": "http://redster51.github.io/WholesalesView",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

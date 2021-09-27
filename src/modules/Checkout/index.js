@@ -264,27 +264,27 @@ const Checkout = () => {
         const loggedInUser = localStorage.getItem('user');
         const localFees = localStorage.getItem('fees');
 
-        if (loggedInUser == null) history.push('/*');
+        if (loggedInUser === null) history.push('/*');
         else {
             const foundUser = JSON.parse(loggedInUser);
             const allFees = JSON.parse(localFees);
 
             console.log(foundUser)
             const orders = allFees
-                .filter(item => foundUser.orders.find(value => value.feeId == item.id))
+                .filter(item => foundUser.orders.find(value => value.feeId === item.id))
                 .map(fee =>{
-                    let order = foundUser.orders.find(value => value.feeId == fee.id);
+                    let order = foundUser.orders.find(value => value.feeId === fee.id);
 
                     return {fee: fee, count: order.count}
                 })
                 console.log(orders)
             if (loggedInUser) {
 
-                if (id != foundUser.id) history.push('/forbidden');
+                if (id !== foundUser.id) history.push('/forbidden');
                 else {
                     setPrice(orders[orderId].fee.price * orders[orderId].count);
                     localStorage.setItem('ordersForUser', JSON.stringify(orders))
-                };
+                }
             }
             else history.push('/forbidden');
 

@@ -68,16 +68,16 @@ export default function ProfilePage() {
 
         const itemById = data.find((item) => item.id === Number(id));
 
-        if (itemById == null) history.push('/*');
+        if (itemById === null) history.push('/*');
         else {
             const foundUser = JSON.parse(loggedInUser);
             const allFees = JSON.parse(localFees);
 
-            let activeFees = [];
+            let activeFees;
             let orderList = [];
 
-            if(foundUser.role == 'provider'){
-                activeFees = allFees.filter(item => id == item.provider);
+            if(foundUser.role === 'provider'){
+                activeFees = allFees.filter(item => id === item.provider);
             }else {
                 activeFees = foundUser.fees;
                 orderList = foundUser.orders;
@@ -85,7 +85,7 @@ export default function ProfilePage() {
 
             if (loggedInUser) {
 
-                if (itemById.id != foundUser.id) history.push('/forbidden');
+                if (itemById.id !== foundUser.id) history.push('/forbidden');
                 else {
                     setItemData(foundUser);
                     setFeesData(activeFees);
@@ -99,7 +99,7 @@ export default function ProfilePage() {
     }, [id])
 
     const RenderLinkDependsOnRole = (role) => {
-        if (role == 'provider') {
+        if (role === 'provider') {
             return <Grid style={{ maxWidth: 'initial' }} item xs={3}>
                 <SimpleCard
                     header='Fees List'
@@ -127,7 +127,7 @@ export default function ProfilePage() {
     }
 
     const RederPrimaryCardDependOnRole = (role) => {
-        if (role != 'provider') {
+        if (role !== 'provider') {
             return <Grid className={classes.simpleCard} item xs={5}>
                 <SimpleCard
                     header='Money bank'
@@ -151,11 +151,11 @@ export default function ProfilePage() {
                     <Grid className={classes.rightRoot} container spacing={3}>
                         <Grid className={classes.colorCard} item xs={5}>
                             <SimpleCard
-                                header={itemData.role != 'provider' ? 'Delivery' : 'Unconfirmed fees'}
-                                content={itemData.role != 'provider' ? [{ header: 'Nereast', description: 'not expected' }] : [{ header: 'Fees count', description: '1' }]}
+                                header={itemData.role !== 'provider' ? 'Delivery' : 'Unconfirmed fees'}
+                                content={itemData.role !== 'provider' ? [{ header: 'Nereast', description: 'not expected' }] : [{ header: 'Fees count', description: '1' }]}
                                 isPrimary={true}
                                 isColor={true}
-                                link={itemData.role != 'provider' ? '/' : `privider/fees/${itemData.id}`}>
+                                link={itemData.role !== 'provider' ? '/' : `privider/fees/${itemData.id}`}>
                             </SimpleCard>
                         </Grid>
                         <Grid className={classes.simpleCard} item xs={5}>
@@ -175,6 +175,6 @@ export default function ProfilePage() {
 
             </Grid>
         </div>
-        <Footer isProfile={itemData.role == 'provider'} />
+        <Footer isProfile={itemData.role === 'provider'} />
     </div>
 }

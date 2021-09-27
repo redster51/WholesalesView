@@ -8,7 +8,7 @@ import CustomSlider from '../../components/CustomSlider';
 import { useEffect, useState } from 'react';
 import { ProSidebar, Menu, SubMenu, MenuItem } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import TvIcon from '@material-ui/icons/Tv';
 import SmartphoneIcon from '@material-ui/icons/Smartphone';
 import LaptopIcon from '@material-ui/icons/Laptop';
@@ -43,7 +43,7 @@ export default function FeeContent() {
         const allFees = JSON.parse(localFees);
         if (type) {
             
-            const filteredFees = allFees.filter(item => item.type == type);
+            const filteredFees = allFees.filter(item => item.type === type);
             setFees(filteredFees);
         } else {
             setFees(allFees);

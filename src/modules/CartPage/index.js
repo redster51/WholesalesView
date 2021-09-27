@@ -25,7 +25,7 @@ export default function CartPage() {
 
         const itemById = data.find((item) => item.id === Number(id));
 
-        if (itemById == null) history.push('/*');
+        if (itemById === null) history.push('/*');
         else {
             const foundUser = JSON.parse(loggedInUser);
             const allFees = JSON.parse(localFees);
@@ -34,11 +34,11 @@ export default function CartPage() {
 
             if (loggedInUser) {
 
-                if (itemById.id != foundUser.id) history.push('/forbidden');
+                if (itemById.id !== foundUser.id) history.push('/forbidden');
                 else {
                     setFeesData(fees);
                     localStorage.setItem('feesForUser', JSON.stringify(fees))
-                };
+                }
             }
             else history.push('/forbidden');
 
@@ -50,10 +50,10 @@ export default function CartPage() {
     return <div>
         <Header isHomePage={false} />
         <Typography variant='h4' gutterBottom={true} style={{ marginTop: '5rem', fontWeight: '500', marginBottom: '1rem', paddingLeft: '3rem' }} className={classes.itemInfoContent}>Review your bag</Typography>
-        {feesData.length == 0 ?
+        {feesData.length === 0 ?
             (<div className={classes.itemInfoContent} style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography variant='h5' gutterBottom={true}>Cart is empty</Typography>
-                <img style={{ width: '90px', height: 'auto' }} src={emptyCart} />
+                <img alt="" style={{ width: '90px', height: 'auto' }} src={emptyCart} />
             </div>) : (<></>)}
 
         {feesData.map(itemData => (<CartItem cartItem={itemData} />))}

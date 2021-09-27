@@ -25,26 +25,26 @@ export default function OrderPage() {
 
         const itemById = data.find((item) => item.id === Number(id));
 
-        if (itemById == null) history.push('/*');
+        if (itemById === null) history.push('/*');
         else {
             const foundUser = JSON.parse(loggedInUser);
             const allFees = JSON.parse(localFees);
 
             const orders = allFees
-                .filter(item => foundUser.orders.find(value => value.feeId == item.id))
+                .filter(item => foundUser.orders.find(value => value.feeId === item.id))
                 .map(fee =>{
-                    let order = foundUser.orders.find(value => value.feeId == fee.id);
+                    let order = foundUser.orders.find(value => value.feeId === fee.id);
 
                     return {fee: fee, count: order.count}
                 })
 
             if (loggedInUser) {
 
-                if (itemById.id != foundUser.id) history.push('/forbidden');
+                if (itemById.id !== foundUser.id) history.push('/forbidden');
                 else {
                     setOrdersData(orders);
                     localStorage.setItem('ordersForUser', JSON.stringify(orders))
-                };
+                }
             }
             else history.push('/forbidden');
 
@@ -61,10 +61,10 @@ export default function OrderPage() {
             className={classes.itemInfoContent}>Review your orders
         </Typography>
 
-        {!orderData || orderData.length == 0 ?
+        {!orderData || orderData.length === 0 ?
             (<div className={classes.itemInfoContent} style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography variant='h5' gutterBottom={true}>The order list is empty</Typography>
-                <img style={{ width: '90px', height: 'auto' }} src={emptyCart} />
+                <img alt={""} style={{ width: '90px', height: 'auto' }} src={emptyCart} />
             </div>) : (<></>)}
 
         { orderData.length > 0 && orderData.map(itemData => (<OrderItem orderItem={itemData.fee} counter={itemData.count} />))}

@@ -1,16 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
-import { useStyles } from '../styles';
-import { useHistory, Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import {useStyles} from '../styles';
+import {Link, useHistory} from 'react-router-dom';
 import 'react-bnb-gallery/dist/style.css'
-import {
-    CardMedia,
-    CardContent,
-    CardActions,
-    Typography,
-    Button,
-    ButtonGroup
-} from '@material-ui/core';
+import {Button, ButtonGroup, CardActions, CardContent, CardMedia, Typography} from '@material-ui/core';
 
 export default function CartItem({ cartItem }) {
 
@@ -46,7 +38,7 @@ export default function CartItem({ cartItem }) {
         RemoveItem(id);
 
         window.location.reload(false)
-    };
+    }
 
     function RemoveItem(id) {
         const loggedInUser = localStorage.getItem('user');
@@ -55,16 +47,15 @@ export default function CartItem({ cartItem }) {
         const foundUser = JSON.parse(loggedInUser);
         const userFees = JSON.parse(currentFees);
 
-        let otherFees = userFees.filter(value => value.id != id)
-        let userFeesList = foundUser.fees.filter(value => value != id)
-        foundUser.fees = userFeesList
+        let otherFees = userFees.filter(value => value.id !== id)
+        foundUser.fees = foundUser.fees.filter(value => value !== id)
 
         localStorage.removeItem('feesForUser')
         localStorage.removeItem('user')
 
         localStorage.setItem('feesForUser', JSON.stringify(otherFees))
         localStorage.setItem('user', JSON.stringify(foundUser))
-    };
+    }
 
     function IncrementButton() {
 

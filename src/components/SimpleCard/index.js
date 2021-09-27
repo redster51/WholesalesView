@@ -114,7 +114,7 @@ export default function SimpleCard({ header, content, isPrimary, isColor, isProf
     return <div
         className={isPrimary ? classes.rootCard : classes.sideCard}
         style={isColor ? { display: 'block' } : {}}>
-        <img className={isPrimary ? classes.image : classes.imageLess} src={icon} />
+        <img alt={''} className={isPrimary ? classes.image : classes.imageLess} src={icon} />
         <div className={isColor ? classes.colorContent : classes.cardContent}>
             <Typography
                 variant='h6'
@@ -128,12 +128,12 @@ export default function SimpleCard({ header, content, isPrimary, isColor, isProf
                             variant={isPrimary ? 'body1' : 'body2'}
                             gutterBottom={true}
                             style={isColor ? { color: 'black' } : { color: 'grey' }}
-                            className={index == (content.length - 1) && isProfile ? classes.textMargin : ''}>{item.header}
+                            className={index === (content.length - 1) && isProfile ? classes.textMargin : ''}>{item.header}
                         </Typography>
                         <Typography
                             variant={isPrimary ? 'body1' : 'body2'}
                             gutterBottom={true}
-                            className={index == (content.length - 1) && isProfile ? classes.textMargin : ''}>: {item.description}
+                            className={index === (content.length - 1) && isProfile ? classes.textMargin : ''}>: {item.description}
                         </Typography>
                     </div>
                 ))}

@@ -112,14 +112,14 @@ function ItemInfoPage() {
     }
 
     function GetPageByItemInfo(){
-        if (itemInfo == '1') {
+        if (itemInfo === '1') {
             return <Container className={classes.displayInfo}>
                 <Typography align='justify'>
                     {itemData.fullDescription}
                 </Typography>
             </Container>
         }
-        else if(itemInfo == '2'){
+        else if(itemInfo === '2'){
             return <Grid container direction="row" justify="center" alignItems="center" className={classes.gridMargin}>
                         {itemData.technicalInfo.map((value) => (
                             <Grid item xs={4}>
@@ -135,7 +135,7 @@ function ItemInfoPage() {
                 <Gallery images={itemData.photos} margin='3rem' backdropClosesModal={true}/>
             </div> 
         }
-    };
+    }
 
     return (
         <div>

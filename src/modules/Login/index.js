@@ -74,7 +74,7 @@ export default function LoginPage() {
         event.preventDefault()
         let user = { email: emailField, password: passwordField }
 
-        const foundUser = data.find(item => item.email == user.email && item.password == user.password);
+        const foundUser = data.find(item => item.email === user.email && item.password === user.password);
 
         if(foundUser) localStorage.setItem('user', JSON.stringify(foundUser))
         

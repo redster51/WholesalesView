@@ -65,13 +65,13 @@ export default function ProfileInfoPage() {
         const loggedInUser = localStorage.getItem('user');
         const itemById = data.find((item) => item.id === Number(id));
 
-        if (itemById == null) history.push('/*');
+        if (itemById === null) history.push('/*');
         else {
             const foundUser = JSON.parse(loggedInUser);
 
             if (loggedInUser) {
 
-                if (itemById.id != foundUser.id) history.push('/forbidden');
+                if (itemById.id !== foundUser.id) history.push('/forbidden');
                 else setItemData(foundUser);
             }
             else history.push('/forbidden');
@@ -114,7 +114,7 @@ export default function ProfileInfoPage() {
     }
 
     const renderProviderField = (role) => {
-        if (role == 'provider') {
+        if (role === 'provider') {
             return <div>
                 <FormControl fullWidth className={classes.gridContentForm} variant="filled">
                     <InputLabel htmlFor="filled-adornment-settlementAccount">Settlement account</InputLabel>

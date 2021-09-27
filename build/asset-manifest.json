@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/WholesalesView/static/css/main.d606daff.chunk.css",
-    "main.js": "/WholesalesView/static/js/main.4f81aa5e.chunk.js",
-    "main.js.map": "/WholesalesView/static/js/main.4f81aa5e.chunk.js.map",
-    "runtime-main.js": "/WholesalesView/static/js/runtime-main.5494808f.js",
-    "runtime-main.js.map": "/WholesalesView/static/js/runtime-main.5494808f.js.map",
+    "main.js": "/WholesalesView/static/js/main.6bc8d8ea.chunk.js",
+    "main.js.map": "/WholesalesView/static/js/main.6bc8d8ea.chunk.js.map",
+    "runtime-main.js": "/WholesalesView/static/js/runtime-main.cd181885.js",
+    "runtime-main.js.map": "/WholesalesView/static/js/runtime-main.cd181885.js.map",
     "static/css/2.3fbb703f.chunk.css": "/WholesalesView/static/css/2.3fbb703f.chunk.css",
-    "static/js/2.da3cb3f4.chunk.js": "/WholesalesView/static/js/2.da3cb3f4.chunk.js",
-    "static/js/2.da3cb3f4.chunk.js.map": "/WholesalesView/static/js/2.da3cb3f4.chunk.js.map",
-    "static/js/3.111d3b69.chunk.js": "/WholesalesView/static/js/3.111d3b69.chunk.js",
-    "static/js/3.111d3b69.chunk.js.map": "/WholesalesView/static/js/3.111d3b69.chunk.js.map",
+    "static/js/2.af7d50ec.chunk.js": "/WholesalesView/static/js/2.af7d50ec.chunk.js",
+    "static/js/2.af7d50ec.chunk.js.map": "/WholesalesView/static/js/2.af7d50ec.chunk.js.map",
+    "static/js/3.9c5f8a2b.chunk.js": "/WholesalesView/static/js/3.9c5f8a2b.chunk.js",
+    "static/js/3.9c5f8a2b.chunk.js.map": "/WholesalesView/static/js/3.9c5f8a2b.chunk.js.map",
     "index.html": "/WholesalesView/index.html",
     "static/css/2.3fbb703f.chunk.css.map": "/WholesalesView/static/css/2.3fbb703f.chunk.css.map",
     "static/css/main.d606daff.chunk.css.map": "/WholesalesView/static/css/main.d606daff.chunk.css.map",
-    "static/js/2.da3cb3f4.chunk.js.LICENSE.txt": "/WholesalesView/static/js/2.da3cb3f4.chunk.js.LICENSE.txt",
+    "static/js/2.af7d50ec.chunk.js.LICENSE.txt": "/WholesalesView/static/js/2.af7d50ec.chunk.js.LICENSE.txt",
     "static/media/logo.b33d5cc2.png": "/WholesalesView/static/media/logo.b33d5cc2.png",
     "static/media/producBuoy.f5e900f9.svg": "/WholesalesView/static/media/producBuoy.f5e900f9.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5494808f.js",
+    "static/js/runtime-main.cd181885.js",
     "static/css/2.3fbb703f.chunk.css",
-    "static/js/2.da3cb3f4.chunk.js",
+    "static/js/2.af7d50ec.chunk.js",
     "static/css/main.d606daff.chunk.css",
-    "static/js/main.4f81aa5e.chunk.js"
+    "static/js/main.6bc8d8ea.chunk.js"
   ]
 }
